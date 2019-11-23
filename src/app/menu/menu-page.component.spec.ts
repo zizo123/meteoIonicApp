@@ -1,35 +1,29 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
-import { ListPage } from './list.page';
+import { MenuPage } from './menu-page.component';
 
-describe('ListPage', () => {
-  let component: ListPage;
-  let fixture: ComponentFixture<ListPage>;
+describe('MenuPage', () => {
+  let component: MenuPage;
+  let fixture: ComponentFixture<MenuPage>;
   let listPage: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListPage ],
+      declarations: [ MenuPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
       .compileComponents();
   }));
 
   beforeEach(async () => {
-    fixture = await TestBed.createComponent(ListPage);
+    fixture = await TestBed.createComponent(MenuPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should have a list of 10 elements', () => {
-    listPage = fixture.nativeElement;
-    const items = listPage.querySelectorAll('ion-item');
-    expect(items.length).toEqual(10);
   });
 
 });

@@ -12,9 +12,13 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+    path: 'menu',
+    loadChildren: './menu/menu.module#ListPageModule'
+  },
+  { path: 'meteo', loadChildren: './meteo/meteo.module#MeteoPageModule' },
+  { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryPageModule' },
+  { path: 'locations', loadChildren: './locations/locations.module#LocationsPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
 ];
 
 @NgModule({
